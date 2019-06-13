@@ -12,10 +12,10 @@ declare const within: typeof getQueriesForElement;
 interface Query extends Function {
   (testRenderer: ReactTestRenderer | NativeTestInstance, ...args: any[]):
     | Error
-    | Promise<HTMLElement[]>
-    | Promise<HTMLElement>
-    | HTMLElement[]
-    | HTMLElement
+    | Promise<NativeTestInstance[]>
+    | Promise<NativeTestInstance>
+    | NativeTestInstance[]
+    | NativeTestInstance
     | null;
 }
 

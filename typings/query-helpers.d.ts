@@ -4,9 +4,9 @@ import { Matcher, MatcherOptions } from './matches';
 
 type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export interface SelectorMatcherOptions extends MatcherOptions {
+export type SelectorMatcherOptions = Omit<MatcherOptions, 'selector'> & {
   selector?: string;
-}
+};
 
 type ReactTestInstance = {
   getProp: (string) => NativeTestInstance;
