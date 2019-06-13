@@ -10,7 +10,7 @@ import { getQueriesForElement, BoundFunction } from './get-queries-for-element';
 declare const within: typeof getQueriesForElement;
 
 interface Query extends Function {
-  (testRenderer: ReactTestRenderer | NativeTestInstance, ...args: any[]):
+  (testRenderer: ReactTestRenderer, ...args: any[]):
     | Error
     | Promise<NativeTestInstance[]>
     | Promise<NativeTestInstance>

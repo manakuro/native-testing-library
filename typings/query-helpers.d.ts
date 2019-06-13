@@ -8,8 +8,8 @@ export type SelectorMatcherOptions = Omit<MatcherOptions, 'selector'> & {
   selector?: string;
 };
 
-type ReactTestInstance = {
-  getProp: (string) => NativeTestInstance;
+type ReactTestInstance = ReactTestInstance & {
+  getProp: (str: string) => NativeTestInstance;
 };
 
 export type NativeTestInstance = Omit<
